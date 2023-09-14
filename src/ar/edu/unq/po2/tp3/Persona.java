@@ -5,6 +5,7 @@ import java.time.Period;
 
 public class Persona {
 	
+	/* Ejercicio 10
 	private String nombre;
 	private LocalDate fechaDeNacimiento;
 	
@@ -31,7 +32,7 @@ public class Persona {
 		return this.calcularEdad() < persona.calcularEdad();
 	}
 	
-	/*
+	
 	1. Responder: Si un objeto cualquiera que le pide la edad a una Persona: ¿Conoce cómo ésta calcula u
 	obtiene tal valor? ¿Cómo se llama el mecanismo de abstracción que permite esto?
 	No lo conoce porque esa información está disponible solo para el objeto Persona. El mecanismo se 
@@ -46,4 +47,10 @@ public class Persona {
 	que recibe como parámetros el nombre y la fecha de nacimiento de la persona a crear, crea una
 	nueva instancia de Persona y la retorna inicializada con los valores recibidos como parámetro.
 	*/
+	
+	// Ejercicio 11
+	private String nombre;
+	private String apellido;
+	private int edad;
+	
 }
