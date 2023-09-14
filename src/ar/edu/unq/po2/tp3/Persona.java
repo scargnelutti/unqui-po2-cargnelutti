@@ -1,7 +1,7 @@
 package ar.edu.unq.po2.tp3;
 
-import java.time.LocalDate;
-import java.time.Period;
+// import java.time.LocalDate;
+// import java.time.Period;
 
 public class Persona {
 	
@@ -53,6 +53,14 @@ public class Persona {
 	private String apellido;
 	private int edad;
 	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
 	public Persona(String nombre, String apellido, int edad) {
 		super();
 		this.nombre = nombre;

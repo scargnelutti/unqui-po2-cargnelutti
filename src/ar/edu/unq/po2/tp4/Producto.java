@@ -2,32 +2,20 @@ package ar.edu.unq.po2.tp4;
 
 public class Producto {
 	
-	private String nombre;
-	private Double precio;
-	private boolean precioCuidado;
+	protected String nombre;
+	protected Double precio;
+	protected boolean precioCuidado;
 	
 	public String getNombre() {
 		return nombre;
-	}
-	
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
 	}
 	
 	public Double getPrecio() {
 		return precio;
 	}
 	
-	public void setPrecio(Double precio) {
-		this.precio = precio;
-	}
-	
-	public boolean esPreciosCuidados() {
+	public boolean esPrecioCuidado() {
 		return precioCuidado;
-	}
-	
-	public void setPreciosCuidados(boolean precioCuidado) {
-		this.precioCuidado = precioCuidado;
 	}
 	
 	public Producto(String nombre, Double precio, boolean precioCuidado) {
@@ -43,4 +31,9 @@ public class Producto {
 		this.precio = precio;
 		this.precioCuidado = false;
 	}
+	
+	public void aumentarPrecio(Double unPrecio) {
+		this.precio = this.precio + unPrecio;
+	}
+	
 }
