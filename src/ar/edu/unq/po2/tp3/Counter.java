@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Counter {
 	
 	private ArrayList<Integer> counter = new ArrayList<Integer>();
-
+	
 	public void addNumber(int x) {
 		counter.add(x);
 	}
@@ -30,7 +30,6 @@ public class Counter {
 	}
 
 	public int getSize() {
-		// int size = counter.size();
 		return counter.size();
 	}
 
@@ -45,6 +44,7 @@ public class Counter {
 		return result;
 	}
 	
+	// 2
 	public int numeroConMayorCantidadDeDigitosParesEn(Counter x) {
 		int result = 0;
 		int numeroActual = 0;
@@ -59,15 +59,26 @@ public class Counter {
 	public int digitosParesEnNumero(int x) {
 		int result = 0;
 		while (x > 0) {
-			// Creo que el valor de x no se modifica por como funciona el mod
 			if ((x % 10) % 2 == 0) {
 				result++;
 			}
+			x = x / 10;
 		}
 		return result;
 	}
 	
 	public int getElementAt(int x) {
 		return counter.get(x);
+	}
+
+	// 3
+	public int numeroMenorAMilYMultiploDeY(int x, int y) {
+		int result = x * y;
+		for (int i = 1000; i > 0; i--) {
+			if ((i % result) == 0) {
+				return i;
+			}
+		}
+		return -1;
 	}
 }
