@@ -3,7 +3,7 @@ package ar.edu.unq.po2.tp5;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CajaDelMercadoCentral {
+public class CajaDelMercadoCentral implements Agencia {
 	
 	private List<Producto> productosEnFila;
 	private double montoAPagar;
@@ -38,6 +38,13 @@ public class CajaDelMercadoCentral {
 
 	public List<Producto> getProductosEnFila() {
 		return productosEnFila;
+	}
+
+
+	@Override
+	public void registrarPago(Factura factura) {
+		
+		
 	}
 	
 }
