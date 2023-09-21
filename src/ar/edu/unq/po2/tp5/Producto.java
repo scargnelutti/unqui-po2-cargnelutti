@@ -4,7 +4,7 @@ public class Producto {
 	
 	protected String nombre;
 	protected double precio;
-	private int stock;
+	protected int stock;
 	
 	public Producto(String nombre, double precio, int stock) {
 		super();
