@@ -51,8 +51,10 @@ public class ClienteEMail {
 
 	
 	// OCP: Se viola este metodo al tipar con clases concretas las colecciones y especialmente
-	// el servidor, porque así se depende de la implementación a la que pertenece el tipo.
-	// La alternativa es usar las interfaces List<> y IServidor
+	// el servidor, porque así se depende de la implementación a la que pertenece el tipo. Esto hace obligatorio 
+	// modificar el programa para poder extenderlo.
+	// La alternativa es usar las interfaces List<> y IServidor.
+	// A su vez se viola el DIP, por las mismas razones.
 	
-	
+	// ¿Podría tipar a ClienteEMail con una interfaz?
 }
