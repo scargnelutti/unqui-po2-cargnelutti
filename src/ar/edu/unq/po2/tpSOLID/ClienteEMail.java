@@ -17,7 +17,7 @@ public class ClienteEMail {
 		this.inbox = new ArrayList<Correo>();
 		this.borrados = new ArrayList<Correo>();
 		this.conectar();
-	}
+	} // Creo que cumple con el SRP. Un cliente email debe estar conectado a un servidor para ser un cliente email
 	
 	public void conectar(){
 		this.servidor.conectar(this.nombreUsuario,this.passUsuario);
@@ -25,7 +25,7 @@ public class ClienteEMail {
 	
 	public void borrarCorreo(Correo correo){
 		this.inbox.remove(correo);
-		this.borrados.remove(correo);
+		this.borrados.remove(correo); // this.borrados.add(correo);
 	}
 	
 	public int contarBorrados(){
@@ -49,4 +49,10 @@ public class ClienteEMail {
 		this.servidor.enviar(correo);
 	}
 
+	
+	// OCP: Se viola este metodo al tipar con clases concretas las colecciones y especialmente
+	// el servidor, porque así se depende de la implementación a la que pertenece el tipo.
+	// La alternativa es usar las interfaces List<> y IServidor
+	
+	
 }

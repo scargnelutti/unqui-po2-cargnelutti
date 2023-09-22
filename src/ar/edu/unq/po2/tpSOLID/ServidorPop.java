@@ -13,7 +13,7 @@ public class ServidorPop implements IServidor {
 		return retorno;
 	}
 
-	public void conectar(String nombreUsuario, String passusuario) {
+	public void conectar(String nombreUsuario, String passUsuario) {
 	   //Verifica que el usuario sea valido y establece la conexion.
 		
 	}
@@ -39,6 +39,9 @@ public class ServidorPop implements IServidor {
 		
 	}
 
+	// SRP: Se viola este principio en el último método de la clase, ya que le agrega 
+	// al servidor la responsabilidad de realizar copias de sí mismo	
 
-
+	
+	// 
 }
