@@ -9,11 +9,17 @@ public interface IServidor {
 	public void conectar(String nombreUsuario, String passUsuario);
 
 	public void enviar(Correo correo);
-	
+	/*
 	public float tasaDeTransferencia();
 
 	public void resetear();
 	
 	public void realizarBackUp();
+	*/
+	
+	// SRP: Se viola este principio en el último método de la clase, ya que le agrega 
+	// al servidor la responsabilidad de realizar copias de sí mismo	
 
+		
+	// 
 }

@@ -1,16 +1,17 @@
 package ar.edu.unq.po2.tpSOLID;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ClienteEMail {
 	
-	 ServidorPop servidor; // El tipo podría ser IServidor, para soportar otros servidores, como SMTP
+	 IServidor servidor; // El tipo podría ser IServidor, para soportar otros servidores, como SMTP
 	 String nombreUsuario;
 	 String passUsuario;
-	 ArrayList<Correo> inbox; // El tipo podría ser List<>, para no estar acoplado a la implementación de ArrayList<>
-	private ArrayList<Correo> borrados; // Idem
+	 List<Correo> inbox; // El tipo podría ser List<>, para no estar acoplado a la implementación de ArrayList<>
+	private List<Correo> borrados; // Idem
 	
-	public ClienteEMail(ServidorPop servidor, String nombreUsuario, String pass){ // El primer argumento debe ser de tipo List<>
+	public ClienteEMail(IServidor servidor, String nombreUsuario, String pass){ // El primer argumento debe ser de tipo IServidor
 		this.servidor=servidor;
 		this.nombreUsuario=nombreUsuario;
 		this.passUsuario=pass;
@@ -25,7 +26,7 @@ public class ClienteEMail {
 	
 	public void borrarCorreo(Correo correo){
 		this.inbox.remove(correo);
-		this.borrados.remove(correo); // this.borrados.add(correo);
+		this.borrados.add(correo); // this.borrados.add(correo);
 	}
 	
 	public int contarBorrados(){

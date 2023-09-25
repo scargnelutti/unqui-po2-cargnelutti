@@ -22,6 +22,7 @@ public class ServidorPop implements IServidor {
       //realiza lo necesario para enviar el correo.		
 	}
 
+	/*
 	@Override
 	public float tasaDeTransferencia() {
 		//no corresponde
@@ -32,16 +33,12 @@ public class ServidorPop implements IServidor {
 	public void resetear() {
          //no corresponde		
 	}
-
-	@Override
+	
 	public void realizarBackUp() {
 		//no corresponde
 		
-	}
+	}*/
 
-	// SRP: Se viola este principio en el último método de la clase, ya que le agrega 
-	// al servidor la responsabilidad de realizar copias de sí mismo	
-
-	
-	// 
+	// Quizá estos 3 métodos finales que no corresponden sean una violación al principio de interface segregation
+	// porque la clase ServidorPop debe implementar métodos que no necesita
 }
