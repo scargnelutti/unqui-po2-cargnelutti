@@ -39,6 +39,7 @@ public class SecretariaDeDeportes {
 		this.actividades.add(unaActividad);
 	}
 
-	
-	
+	public void imprimirActividades() {
+		this.actividades.stream().forEach(actividad -> System.out.print(actividad.toString()));
+	}
 }

@@ -37,6 +37,7 @@ public class ActividadSemanal implements Comparable<ActividadSemanal> {
 	// Quizá un EnumMap me ayude
 	public int calcularCosto() {
 		int costo = this.getComplejidad() * 200;
+		// calculo de costo segun dia
 		
 		return costo;
 	}
@@ -45,6 +46,16 @@ public class ActividadSemanal implements Comparable<ActividadSemanal> {
 	public int compareTo(ActividadSemanal o) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	
+	/* e-Investigue que es el método toString y cual es la utilidad de redefinirlo. Redefina el
+	método toString de ActividadSemanal de forma que cuando se imprima una actividad
+	semanal, se imprima del siguiente modo
+	“Deporte: FUTBOL. Dia: MARTES A LAS: 19 . Duración: 1 hora(s).”
+	*/
+	@Override
+	public String toString() {
+		return "Deporte: " + this.deporte.name() + ". " + "Dia: " + this.dia.name() + " A LAS " + this.horaDeInicio + ". Duracion: " + this.duracion + " hora(s).";
 	}
 	
 }

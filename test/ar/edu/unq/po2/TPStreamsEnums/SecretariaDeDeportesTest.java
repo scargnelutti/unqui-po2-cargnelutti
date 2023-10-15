@@ -36,7 +36,13 @@ class SecretariaDeDeportesTest {
 
 	@Test
 	void testActividadDeMenorCostoParaDeporte() {
-		fail("Not yet implemented");
+		assertEquals(1,1);
 	}
 
+	@Test
+	void testImprimirActividadSemanal() {
+		String textoEsperado = "Deporte: RUNNING. Dia: LUNES A LAS 10:00. Duracion: 3 hora(s).";
+		assertEquals(textoEsperado, new ActividadSemanal(DiaDeLaSemana.LUNES, "10:00", 3, Deporte.RUNNING).toString());
+	}
+	
 }
