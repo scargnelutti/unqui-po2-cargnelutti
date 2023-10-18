@@ -4,45 +4,37 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.*;
+
+import java.util.stream.Stream;
 
 class PokerStatusTest {
 
-	private PokerStatus unPokerStatus;
-
 	/*
-	Carta carta = new Carta("10", "D");
-	Carta carta2 = new Carta("4", "T");
-	Carta carta3 = new Carta("1", "D");
-	Carta carta4 = new Carta("K", "D");
-	Carta carta5 = new Carta("4", "D");
-	Carta carta6 = new Carta("5", "D");
-	Carta carta7 = new Carta("10", "P");
-	Carta carta8 = new Carta("10", "D");
-	Carta carta9 = new Carta("1", "P");
-	
-	
-	 * String poker = unPokerStatus.verificar(carta, carta7, carta8, carta11, carta2);
-		String color = unPokerStatus.verificar(carta, carta3, carta4, carta5, carta6);
-		String trio = unPokerStatus.verificar(carta, carta7, carta8, carta5, carta6);
-		String nada = unPokerStatus.verificar(carta, carta9, carta10, carta11, carta6);
+	 * 	// SUT: PokerStatus
+		// DOC: Carta
 	 */
+	private PokerStatus unPokerStatus;
+	/*
+	private Carta carta1;
+	private Carta carta2;
+	private Carta carta3;
+	private Carta carta4;
+	private Carta carta5;*/
+	
 	// Setup
 	@BeforeEach
 	void setUp() throws Exception {
 		unPokerStatus = new PokerStatus();
+		/*
+		carta1 = mock(Carta.class);
+		carta2 = mock(Carta.class);
+		carta3 = mock(Carta.class);
+		carta4 = mock(Carta.class);
+		carta5 = mock(Carta.class);*/
+		
 	}
 
-	/* Para anterior verificar()
-	@Test
-	void testVerificar() {
-		// Exercise
-		boolean hayPoker = unPokerStatus.verificar("10D", "10D", "10D", "10D", "4T");
-		boolean hayPoker2 = unPokerStatus.verificar("10D", "1P", "KC", "4T", "5D");
-		// Verify
-		assertEquals(true, hayPoker);
-		assertEquals(false, hayPoker2);
-	}
-	*/
 	
 	/* Previo a la clase Carta
 	@Test
@@ -72,6 +64,11 @@ class PokerStatusTest {
 		assertEquals("Color", color);
 		assertEquals("Trio", trio);
 		assertEquals("Nada", nada);
+	
+		/*
+		when(unPokerStatus.verificar(carta1, carta2, carta3, carta4, carta5)).thenReturn("Poker");
+		String resultado = unPokerStatus.verificar(carta1, carta2, carta3, carta4, carta5);
+		assertEquals("Poker", resultado);*/
 	}
 	
 	@Test
@@ -85,4 +82,9 @@ class PokerStatusTest {
 		assertEquals(true, unPokerStatus.esDelMismoPaloQue(new Carta("3", "D"), new Carta("5", "D")));
 		assertEquals(false, unPokerStatus.esDelMismoPaloQue(new Carta("3", "D"), new Carta("5", "P")));
 	}
+	
+	/* 1) ¿Qué son los test doubles? 
+	Tests unitarios en el que cualquier conocimiento por fuera del SUT es un objeto falso
+	
+	*/
 }
