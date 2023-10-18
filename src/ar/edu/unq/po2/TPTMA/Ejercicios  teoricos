@@ -1,0 +1,20 @@
+Ejercicio 1
+a. ¿Dónde se define el esqueleto del algoritmo?
+Se lo define en un método de la superclase
+
+b. ¿Se puede redefinir el esqueleto?
+No.
+
+c. ¿Qué es lo que se puede redefinir?
+Se puede redefinir los métodos que estén dentro del esqueleto
+ 
+d. ¿Qué es un hook method?
+Un método que no hace nada.
+
+
+Ejercicio 2
+
+Participantes:
+
+Empleado: Clase abstracta que define el método esqueleto
+Subclases de empleado: Subclases concretas que heredan el método esqueleto e implementan los métodos que estén dentro 
