@@ -5,7 +5,7 @@ public abstract class Empleado {
 	public Empleado() {
 	}
 
-	public double sueldo() {
+	public final double sueldo() {
 		double sueldo = this.sueldoBasico() * this.porcentajeDeAportesYObraSocial() + this.dineroPorHoras() + this.dineroPorSituacionFamiliar();
 		return sueldo;
 	}
