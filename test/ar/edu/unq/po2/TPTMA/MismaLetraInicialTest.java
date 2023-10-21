@@ -3,8 +3,6 @@ package ar.edu.unq.po2.TPTMA;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-import java.util.List;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +12,7 @@ class MismaLetraInicialTest {
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		unMismaLetraInicial = new MismaLetraInicial();
+		unMismaLetraInicial = mock(MismaLetraInicial.class);
 	}
 
 	@Test
