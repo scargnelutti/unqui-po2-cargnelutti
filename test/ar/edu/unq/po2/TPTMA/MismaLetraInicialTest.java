@@ -19,7 +19,7 @@ class MismaLetraInicialTest {
 	void testGetSimilarPages() {
 		// List<WikipediaPage> paginasSimilares = unMismaLetraInicial.getSimilarPages(pagina1, paginas);
 		// assertEquals(paginasSimilares.size(), 1);
-		assertEquals(1,1);
+		assertEquals(1 ,1);
 	}
 
 }

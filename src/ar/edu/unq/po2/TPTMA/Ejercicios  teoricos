@@ -18,3 +18,44 @@ Participantes:
 
 Empleado: Clase abstracta que define el método esqueleto
 Subclases de empleado: Subclases concretas que heredan el método esqueleto e implementan los métodos que estén dentro 
+
+
+Ejercicio 4
+
+El template method es costoFinal()
+La única operación primitiva es esHoraPico()
+El resto de operaciones concretas son costoNeto() y getTiempo()
+No hay hook method en este caso
+
+
+Ejercicio 6
+
+1. Existe más de un tipo de adaptadores, mencione y explique cada uno de ellos.
+
+   Por un lado están los adaptadores de clase. Esta clase extiende la clase que 
+quiere adaptar e implementa la interfaz que no es compatible con el adaptee, redefiniendo los métodos y 
+delegándolos al adaptee.
+
+   Por otro lado está el adaptador de objetos. Esta clase tiene como variable de instancia al objeto que busca adaptar.
+Implementa la interfaz incompatible 
+
+
+
+2. ¿En qué se diferencia un tipo de adaptador del otro?
+
+
+3. ¿Se pueden utilizar ambas alternativas de implementación del patrón en java?  Justifique la respuesta
+4. Ver la interface Enumeration de java y la clase Vector, preste atención a que dicha 
+clase contiene un método "elements()". Explique cómo funciona el patrón adapter 
+y cuáles son los roles de los participantes entre la interface y clase mencionada. 
+Mencione qué tipo de implementación del patrón se utiliza.
+5. Realice el mismo análisis del punto 3, pero con la interface Iterator, la clase 
+ArrayList (preste atención al método "iterator()"). Muestre un ejemplo de 
+funcionamiento y especifique los roles de cada participante.
+6. Implemente un Adaptador, que adapte un Iterator a un Enumeration. Escribir 
+código que utilice dicha implementación adaptando un ArrayList.
+
+
+
+
+
