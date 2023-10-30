@@ -2,8 +2,12 @@ package ar.edu.unq.po2.TPTMA;
 
 public class IObserver {
 
+	private int x;
+	private int y;
+	
 	public IObserver() {
-		// TODO Auto-generated constructor stub
+		this.x = 1;
+		this.y = 2;
 	}
 
 }
